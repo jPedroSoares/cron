@@ -1,0 +1,16 @@
+{
+  "name": "cron-job",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "João Soares",
+  "description": "Cron jobs test",
+  "license": "BSD-3-Clause",
+  "repository": "https://github.com/jPedroSoares/cron-jobs",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "dependencies": {
+    "node-cron": "^2.0.3",
+    "@hapi/hapi": "18.4.0"
+  }
+}
