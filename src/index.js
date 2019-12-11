@@ -1,5 +1,4 @@
 const Hapi = require('@hapi/hapi')
-const cron = require('node-cron')
 
 const routes = require('./routes')
 
@@ -12,13 +11,15 @@ const init = async () => {
 
     const server = Hapi.server(configs)
 
-    server.route(routes)
+    await server.route(routes)
+
+    await server.register([
+        { plugin: require('./jobs')}
+    ])
 
     await server.start()
 
     console.log('Servidor rodando na porta 3000')
-
-    cron.schedule("* * * * *", () => console.log("Executando a tarefa a cada 1 minuto"))
     
 }
 
