@@ -6,7 +6,7 @@
 Está biblioteca é utilizada para fazer agendamento de tarefas.
 
 # Utilização
-Antes de utilizar o fazer testes, instale as dependências:
+Antes de utilizar ou fazer testes, instale as dependências:
 
 ```
     # npm ci
